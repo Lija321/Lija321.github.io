@@ -1,2 +1,2 @@
-# Lija321.github.io
-Personal site
+# Dejan Lisica
+this will be a personal/cv site
