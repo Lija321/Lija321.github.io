@@ -40,7 +40,7 @@ export const projects: ProjectCardType[] = [
   {
     title: 'NoSQL database',
     boldText: 'University project',
-    normalText: 'NoSQL database implementation in Python. It is a simple database that uses a file to store the data.',
+    normalText: 'NoSQL database implementation in GO. For the Advanced Algorithms and Datastructures course.',
     imageUrl: '/nosql.jpg',
     hoverColor1: '#667eea',
     hoverColor2: '#764ba2',
