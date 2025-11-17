@@ -1,9 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import Logo from './components/headers/Logo';
-import Navigation from './components/headers/Navigation';
-import ContactLinks from './components/headers/ContactLinks';
-import Footer from './components/Footer';
+import { Logo, Navigation, ContactLinks, Footer } from './components';
 import Projects from './pages/Projects';
 import Info from './pages/Info';
 import './App.css';
