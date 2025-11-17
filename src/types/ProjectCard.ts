@@ -5,5 +5,5 @@ export interface ProjectCard {
   imageUrl: string;
   hoverColor1: string;
   hoverColor2: string;
+  redirect_link: string;
 }
-

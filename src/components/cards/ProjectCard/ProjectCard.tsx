@@ -7,6 +7,12 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
+  const handleNavigate = () => {
+    if (project.redirect_link) {
+      window.open(project.redirect_link, '_blank', 'noopener,noreferrer');
+    }
+  };
+
   return (
     <div 
       className="project-card"
@@ -14,6 +20,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         '--hover-color-1': project.hoverColor1,
         '--hover-color-2': project.hoverColor2,
       } as React.CSSProperties}
+      role="link"
+      tabIndex={0}
+      onClick={handleNavigate}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          handleNavigate();
+        }
+      }}
     >
       <div className="project-card-inner">
         <div className="project-card-header">
