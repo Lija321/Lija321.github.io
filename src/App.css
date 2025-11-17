@@ -13,13 +13,16 @@ html {
   flex-direction: column;
   color: #121212;
   background-color: #121212;
+  position: relative;
 }
+
 
 #Logo{
   position: fixed;
   top: 2em;
   left: 3em;
   background-color: transparent;
+  z-index: 100;
 }
 
 #Navigation{
@@ -28,6 +31,7 @@ html {
   left: 50%;
   transform: translateX(-50%);
   background-color: transparent;
+  z-index: 100;
 }
 
 #ContactLinks{
@@ -35,11 +39,14 @@ html {
   top: 2em;
   right: 3em;
   background-color: transparent;
+  z-index: 100;
 }
 
 main {
   flex: 1;
-    background-color: #121212;
+  background-color: transparent;
+  position: relative;
+  z-index: 10;
 }
 
 @media (max-width: 1024px) {
