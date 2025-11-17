@@ -13,6 +13,11 @@
   position: relative;
   overflow: visible;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+.navigation:hover {
+  background-color: rgba(65, 65, 65, 0.6);
 }
 
 .nav-slider {
@@ -28,11 +33,11 @@
 
 .nav-bar {
   position: absolute;
-  top: -0.15rem;
+  top: -0.2rem;
   height: 3px;
-  width: 3rem;
+  width: 2rem;
   background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 2px;
+  border-radius: 0 2px 2px 0;
   transition: left 0.35s ease-in-out 0.1s, transform 0.35s ease-in-out 0.1s;
   z-index: 8;
   pointer-events: none;

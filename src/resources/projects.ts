@@ -8,7 +8,7 @@ export const projects: ProjectCardType[] = [
     imageUrl: 'https://www.thesgc.org/sites/default/files/2025-08/logo%20website.png',
     hoverColor1: '#4facfe',
     hoverColor2: '#00f2fe',
-    redirect_link: 'https://www.synapse.org/Synapse:syn65660836/wiki/632249s',
+    redirect_link: 'https://www.synapse.org/Synapse:syn65660836/wiki/632249',
   },
   {
     title: 'KANNET',
