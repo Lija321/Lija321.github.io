@@ -1,0 +1,101 @@
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  background-color: rgba(45, 45, 45, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  padding: 0.5rem;
+  width: fit-content;
+  position: relative;
+  overflow: visible;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.nav-slider {
+  position: absolute;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  width: calc(50% - 0.5rem);
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 50px;
+  transition: transform 0.35s ease-in-out;
+  z-index: 1;
+}
+
+.nav-bar {
+  position: absolute;
+  top: -0.15rem;
+  height: 3px;
+  width: 3rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 2px;
+  transition: left 0.35s ease-in-out 0.1s, transform 0.35s ease-in-out 0.1s;
+  z-index: 8;
+  pointer-events: none;
+}
+
+.nav-spotlight {
+  position: absolute;
+  top: -0.12rem;
+  width: 5.5rem;
+  height: 5.5rem;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.06) 30%, transparent 60%);
+  border-radius: 50%;
+  transition: left 0.35s ease-in-out 0.1s, transform 0.35s ease-in-out 0.1s;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.nav-slider.slider-left {
+  transform: translateX(0);
+  left: 0.5rem;
+}
+
+.nav-slider.slider-right {
+  transform: translateX(100%);
+  left: 0.5rem;
+}
+
+
+.nav-button {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 0.6rem 2rem;
+  border-radius: 50px;
+  transition: background 0.3s ease, color 0.2s ease;
+  cursor: pointer;
+  z-index: 5;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex: 1;
+  min-width: 0;
+}
+
+.nav-button:first-of-type:hover {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.03), transparent);
+}
+
+.nav-button:last-of-type:hover {
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.03), transparent);
+}
+
+.nav-button.active {
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .nav-button {
+    padding: 0.5rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
