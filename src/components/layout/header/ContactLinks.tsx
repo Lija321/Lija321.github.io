@@ -14,7 +14,7 @@ const ContactLinks: React.FC = () => {
         <span className="arrow">↗</span>
       </a>
       <a 
-        href="/resume.pdf" 
+        href="https://drive.google.com/file/d/1Fs2wj3lbk1ImnzlUaxfKK-u_bu163mvO/view?usp=sharing" 
         target="_blank" 
         rel="noopener noreferrer"
         className="contact-link"

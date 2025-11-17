@@ -7,27 +7,26 @@
   overflow: visible;
 }
 
-.projects-page::before {
+.projects-bg::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  top: -10vh;
   width: 100vw;
   height: 80vh;
   background-image: url(../background.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  filter: blur(150px) brightness(25) saturate(20);
-  opacity: 0.8;
+  filter: blur(150px) brightness(22) saturate(24);
+  opacity: 0;
   z-index: -1;
   pointer-events: none;
   mask-image: radial-gradient(ellipse 140% 130% at center top, black 0%, black 25%, rgba(0,0,0,0.6) 45%, rgba(0,0,0,0.3) 60%, transparent 80%);
   -webkit-mask-image: radial-gradient(ellipse 140% 130% at center top, black 0%, black 25%, rgba(0,0,0,0.6) 45%, rgba(0,0,0,0.3) 60%, transparent 80%);
+  animation: projects-bg-fade 1600ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
-.projects-page::after {
+.projects-bg::after {
   content: '';
   position: absolute;
   top: 0;
@@ -52,6 +51,8 @@
   margin: 0 auto;
   padding: 0 3rem;
   margin-top: 10vh;
+  position: relative;
+  z-index: 2;
 }
 
 .projects-title {
@@ -66,6 +67,78 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 3rem;
+}
+
+.projects-grid .project-card {
+  opacity: 0;
+  transform: translateY(30px) scale(0.992);
+  animation: project-card-fade 820ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.projects-grid .project-card:nth-child(1) { animation-delay: 80ms; }
+.projects-grid .project-card:nth-child(2) { animation-delay: 140ms; }
+.projects-grid .project-card:nth-child(3) { animation-delay: 200ms; }
+.projects-grid .project-card:nth-child(4) { animation-delay: 260ms; }
+.projects-grid .project-card:nth-child(5) { animation-delay: 320ms; }
+.projects-grid .project-card:nth-child(6) { animation-delay: 380ms; }
+
+.projects-page[data-scroll-container] {
+  scrollbar-width: none;
+}
+.projects-page[data-scroll-container]::-webkit-scrollbar {
+  display: none;
+}
+
+html.has-scroll-smooth,
+html.has-scroll-smooth body,
+body.has-scroll-smooth,
+body.has-scroll-smooth-body {
+  overflow: hidden;
+  height: 100%;
+  overscroll-behavior: none;
+}
+html.has-scroll-smooth body::-webkit-scrollbar,
+body.has-scroll-smooth::-webkit-scrollbar,
+body.has-scroll-smooth-body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Enable interaction with Locomotive Scroll's custom scrollbar */
+.c-scrollbar {
+  pointer-events: auto;
+  position: fixed;
+  top: 0;
+  right: 10px;
+  height: 100vh;
+  z-index: 9999;
+}
+
+.c-scrollbar_thumb {
+  pointer-events: auto;
+  background-color: #333; /* thumb color */
+  opacity: 0.8;
+}
+
+@keyframes projects-bg-fade {
+  0% {
+    opacity: 0;
+    transform: translateY(26px);
+  }
+  100% {
+    opacity: 0.9;
+    transform: translateY(0);
+  }
+}
+
+@keyframes project-card-fade {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.992);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 @media (max-width: 768px) {
@@ -87,4 +160,3 @@
     gap: 2rem;
   }
 }
-
