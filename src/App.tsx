@@ -24,6 +24,7 @@ const AppContent: React.FC = () => {
           <Route path="/" element={<Navigate to="/projects" replace />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/info" element={<Info />} />
+          <Route path="*" element={<Navigate to="/projects" replace />} />
         </Routes>
       </div>
     </div>
