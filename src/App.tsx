@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
-import { Logo, Navigation, ContactLinks, Footer } from './components';
+import { Logo, Navigation, ContactLinks } from './components';
 import Projects from './pages/Projects';
 import Info from './pages/Info';
 import './App.css';
