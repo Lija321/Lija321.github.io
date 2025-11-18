@@ -9,8 +9,12 @@ const Projects: React.FC = () => {
 
   useEffect(() => {
     let scrollInstance: any;
+    let initialized = false;
 
     const initScroll = async () => {
+      const isMobile = window.matchMedia('(max-width: 768px)').matches;
+      if (isMobile) return;
+
       const LocomotiveScroll = (await import('locomotive-scroll')).default as any;
       if (!scrollContainerRef.current) return;
 
@@ -28,14 +32,17 @@ const Projects: React.FC = () => {
         smartphone: { smooth: true },
         tablet: { smooth: true },
       });
+      initialized = true;
     };
 
     initScroll();
 
     return () => {
-      document.documentElement.classList.remove('has-scroll-smooth');
-      document.body.classList.remove('has-scroll-smooth');
-      document.body.classList.remove('has-scroll-smooth-body');
+      if (initialized) {
+        document.documentElement.classList.remove('has-scroll-smooth');
+        document.body.classList.remove('has-scroll-smooth');
+        document.body.classList.remove('has-scroll-smooth-body');
+      }
       if (scrollInstance) {
         scrollInstance.destroy();
       }

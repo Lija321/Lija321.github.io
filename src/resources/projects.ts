@@ -26,7 +26,7 @@ export const projects: ProjectCardType[] = [
     imageUrl: '/echo-proteins.jpg',
     hoverColor1: '#667eea',
     hoverColor2: '#764ba2',
-    redirect_link: 'https://github.com/SV25-22/ECHO-Proteins',
+    redirect_link: 'https://arxiv.org/abs/2511.13250',
   },
   {
     title: 'WIGGLE (GNOME SHELL EXTENSION)',
