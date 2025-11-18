@@ -20,7 +20,7 @@ html {
 #Logo{
   position: fixed;
   top: 2em;
-  left: 3em;
+  left: 1.6em;
   background-color: transparent;
   z-index: 100;
 }
@@ -65,28 +65,37 @@ main {
   }
 }
 
-@media (max-width: 1024px) {
-  .header-container {
-    padding: 1.25rem 2rem;
+@media (max-width: 960px) {
+  #Logo {
+    left: 2em;
+    top: 1.3rem;
+    position: relative;
+  }
+
+  #ContactLinks {
+    top: 4.7rem;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+
+  #Navigation {
+    top: 8rem;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
-@media (max-width: 768px) {
-  .header-container {
-    padding: 1rem 1.5rem;
-    flex-wrap: wrap;
-    gap: 1rem;
+@media (max-width: 720px) {
+  #Logo {
+    top: 1rem;
   }
-  
-  .header-container > *:first-child {
-    flex: 0 0 100%;
+
+  #ContactLinks {
+    top: 4.2rem;
   }
-  
-  .header-container > *:nth-child(2) {
-    flex: 0 0 auto;
-  }
-  
-  .header-container > *:nth-child(3) {
-    flex: 0 0 auto;
+
+  #Navigation {
+    top: 7.4rem;
   }
 }
