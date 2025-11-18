@@ -9,6 +9,7 @@
   height: 42px;
   width: auto;
   display: block;
+  transform: translateY(-0.25rem);
 }
 
 .logo-text {
@@ -34,14 +35,14 @@
 
 @media (max-width: 768px) {
   .logo-mark {
-    height: 36px;
+    height: 34px;
   }
 
   .logo-name {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
   }
   
   .logo-title {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
   }
 }

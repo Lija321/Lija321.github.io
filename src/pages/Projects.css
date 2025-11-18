@@ -103,6 +103,11 @@ body.has-scroll-smooth-body::-webkit-scrollbar {
   display: none;
 }
 
+/* Ensure sections start with a transform so locomotive-scroll parsing doesn't hit undefined */
+[data-scroll-section] {
+  transform: translate3d(0, 0, 0);
+}
+
 /* Enable interaction with Locomotive Scroll's custom scrollbar */
 .c-scrollbar {
   pointer-events: auto;
